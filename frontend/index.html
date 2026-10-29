@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footfall · DIH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">footfall</span>
+      <span class="brand-sub">DIH office planner</span>
+    </div>
+
+    <nav class="month-nav" aria-label="Month">
+      <button class="nav-btn" data-act="prev" aria-label="Previous month">&larr;</button>
+      <h1 id="monthLabel" class="month-label"></h1>
+      <button class="nav-btn" data-act="next" aria-label="Next month">&rarr;</button>
+    </nav>
+
+    <div id="who" class="who"></div>
+  </header>
+
+  <main class="layout">
+    <section class="board" aria-label="Office occupancy calendar">
+      <div class="board-head">
+        <p id="lede" class="lede"></p>
+        <div id="headAction"></div>
+      </div>
+      <div id="editbar"></div>
+      <div id="grid" class="grid"></div>
+      <div class="board-foot">
+        <p id="hint" class="hint"></p>
+        <div class="legend" aria-hidden="true">
+          <span>quiet</span><i class="legend-bar"></i><span>packed</span>
+        </div>
+      </div>
+    </section>
+
+    <aside class="side">
+      <section id="me" class="panel"></section>
+      <section id="day" class="panel"></section>
+    </aside>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
