@@ -19,7 +19,11 @@ sign-in only looks them up by email. Offerings: Customer, Cyber, AI & Data, Engi
 Enabling Functions. For now `app.seed` fills it with demo data; later it will be synced from
 the DIH database.
 
-Open http://localhost:8080. API docs: http://localhost:8080/docs
+Open http://localhost:8765. API docs: http://localhost:8765/docs
+
+Host ports are set by `API_PORT` (default 8765) and `DB_PORT` (default 5433). If one is taken,
+override it: `API_PORT=9000 docker compose up -d`, or put it in a `.env` file next to
+`docker-compose.yml`.
 
 ## Config (env vars on the `api` service)
 

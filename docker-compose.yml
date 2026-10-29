@@ -6,7 +6,7 @@ services:
       POSTGRES_PASSWORD: footfall
       POSTGRES_DB: footfall
     ports:
-      - "5433:5432"
+      - "${DB_PORT:-5433}:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
@@ -21,7 +21,7 @@ services:
       DATABASE_URL: postgresql+psycopg://footfall:footfall@db:5432/footfall
       OFFICE_CAPACITY: "500"
     ports:
-      - "8080:8000"
+      - "${API_PORT:-8765}:8000"
     depends_on:
       db:
         condition: service_healthy
