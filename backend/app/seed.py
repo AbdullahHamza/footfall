@@ -35,7 +35,8 @@ REAL_PEOPLE = {2: ("Abdullah Hamza", "ahamzaismail@deloitte.com")}
 
 # Days that should look quiet in the demo: date -> share of capacity.
 QUIET_DAYS = {
-    date(2026, 11, 20): 0.30,
+    date(2026, 11, 19): 0.65,
+    date(2026, 11, 20): 0.40,
     date(2026, 11, 23): 0.26,
     date(2026, 11, 24): 0.22,
     date(2026, 11, 25): 0.18,
